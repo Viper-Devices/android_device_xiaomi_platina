@@ -26,6 +26,7 @@ $(call inherit-product, device/xiaomi/platina/device.mk)
 include vendor/viper/config/common_full_phone.mk
 
 PRODUCT_NAME := viper_platina
+VIPER_BUILD_TYPE := OFFICIAL
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := platina
 PRODUCT_MANUFACTURER := Xiaomi
