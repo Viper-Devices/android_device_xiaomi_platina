@@ -532,6 +532,9 @@
     <!-- Make things go fast -->
     <bool name="config_ui_enableFadingMarquee">false</bool>
 
+<<<<<<< HEAD
+</resources>
+=======
     <!-- The RadioAccessFamilies supported by the device.
          Empty is viewed as "all".  Only used on devices which
          don't support RIL_REQUEST_GET_RADIO_CAPABILITY
@@ -564,7 +567,7 @@
      <bool name="config_enableAutoPowerModes">true</bool>
 
     <!-- Pocket Lock -->
-    <!-- Completely ruins deep sleep -->
     <bool name="config_pocketModeSupported">false</bool>
 
 </resources>
+>>>>>>> e5d279a... platina: overlay: use vibration patterns from Pixel 2
