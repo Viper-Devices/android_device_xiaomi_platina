@@ -158,6 +158,10 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-service \
     libxml2
 
+# NotchBarKiller
+PRODUCT_PACKAGES += \
+    NotchBarKiller
+
 # Charger
 PRODUCT_PACKAGES += \
     init.leds.sh
