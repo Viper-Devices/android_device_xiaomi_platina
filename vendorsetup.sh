@@ -1,3 +1,3 @@
-add_lunch_combo viper_platina-userdebug
-add_lunch_combo viper_platina-eng
-add_lunch_combo viper_platina-user
+add_lunch_combo bootleg_platina-userdebug
+add_lunch_combo bootleg_platina-eng
+add_lunch_combo bootleg_platina-user

@@ -23,10 +23,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_n_mr1.mk
 $(call inherit-product, device/xiaomi/platina/device.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/viper/config/common.mk)
+$(call inherit-product, vendor/bootleg/config/common.mk)
 
-PRODUCT_NAME := viper_platina
-VIPER_BUILD_TYPE := OFFICIAL
+PRODUCT_NAME := bootleg_platina
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := platina
 PRODUCT_MANUFACTURER := Xiaomi
