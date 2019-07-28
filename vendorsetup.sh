@@ -1,3 +1,3 @@
-add_lunch_combo aosp_platina-userdebug
-add_lunch_combo aosp_platina-eng
-add_lunch_combo aosp_platina-user
+add_lunch_combo viper_platina-userdebug
+add_lunch_combo viper_platina-eng
+add_lunch_combo viper_platina-user

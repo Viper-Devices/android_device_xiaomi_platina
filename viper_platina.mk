@@ -22,14 +22,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_n_mr1.mk
 # Inherit from platina device
 $(call inherit-product, device/xiaomi/platina/device.mk)
 
-# Inherit some common PixelExperience stuff.
-export CUSTOM_BUILD_TYPE=OFFICIAL
-TARGET_BOOT_ANIMATION_RES := 1080
-TARGET_INCLUDE_STOCK_ARCORE := true
-TARGET_GAPPS_ARCH := arm64
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+# Inherit some common Lineage stuff.
+$(call inherit-product, vendor/viper/config/common.mk)
 
-PRODUCT_NAME := aosp_platina
+PRODUCT_NAME := viper_platina
+VIPER_BUILD_TYPE := OFFICIAL
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := platina
 PRODUCT_MANUFACTURER := Xiaomi
@@ -41,7 +38,6 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_DEVICE="platina" \
     PRODUCT_NAME="platina" \
     PRIVATE_BUILD_DESC="walleye-user 9 PQ3A.190605.003 5524043 release-keys"
-
     BUILD_FINGERPRINT="google/walleye/walleye:9/PQ3A.190605.003/5524043:user/release-keys"
 
 TARGET_VENDOR := Xiaomi
