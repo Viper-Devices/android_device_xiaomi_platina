@@ -23,7 +23,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_n_mr1.mk
 $(call inherit-product, device/xiaomi/platina/device.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/bootleg/config/common.mk)
+include vendor/bootleggers/config/common_full_phone.mk
 
 PRODUCT_NAME := bootleg_platina
 PRODUCT_BRAND := Xiaomi
