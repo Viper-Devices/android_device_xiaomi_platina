@@ -87,6 +87,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.qti.telephony.vt_cam_interface=1 \
     debug.sf.enable_hwc_vds=1 \
+    debug.cpurend.vsync=false \
     debug.sf.hw=1 \
     debug.sf.latch_unsignaled=1 \
     debug.gralloc.enable_fb_ubwc=1 \
@@ -189,7 +190,21 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Set AudioFlinger client heap size
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.af.client_heap_size_kbyte=7168
+    ro.af.client_heap_size_kbyte=7168 \
+    vendor.audio_hal.in_period_size=144 \
+    vendor.audio_hal.period_multiplier=3 \
+    vendor.audio.adm.buffering.ms=
+
+#add for dirac algo tsx 9/12
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.dirac.acs.controller=qem \
+    persist.dirac.acs.storeSettings=1 \
+    persist.dirac.acs.ignore_error=1
+
+#set for xiaomi headset effect
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.audio.soundfx.dirac=true \
+    persist.audio.dirac.speaker=true
 
 # System prop for RmNet Data
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -267,16 +282,18 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.sensors.pickup=true
 
+# HAL1 apps list
+#PRODUCT_PROPERTY_OVERRIDES += \
+#    vendor.camera.hal1.packagelist=com.android.camera2
+
 # Enable HAL3
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.camera.HAL3.enabled=1 \
-    persist.vendor.camera.eis.enable=1 \
-    persist.camera.HAL3.enabled=1 \
-    persist.camera.eis.enable=1
+    persist.vendor.camera.eis.enable=1
 
 # Expose aux camera for below packages
-PRODUCT_PROPERTY_OVERRIDES += \
-    vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,com.qualcomm.qti.qmmi,org.lineageos.snap
+#PRODUCT_PROPERTY_OVERRIDES += \
+#    vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,com.android.camera2
 
 # Disable UBWC for camera
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -303,6 +320,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Disable Skip Validate
 PRODUCT_PROPERTY_OVERRIDES += \
     sdm.debug.disable_skip_validate=1
+
+# Make data selection stick in dual SIM devices
+persist.radio.aosp_usr_pref_sel=true
 
 # Display Properties as per treble compliance
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -356,6 +376,16 @@ PRODUCT_PROPERTY_OVERRIDES += \
 #
 # ADDITIONAL VENDOR BUILD PROPERTIES
 #
+
+# ART
+PRODUCT_PROPERTY_OVERRIDES += \
+    dalvik.vm.dex2oat-filter=speed \
+    dalvik.vm.image-dex2oat-filter=speed \
+    ro.vendor.qti.am.reschedule_service=true \
+    ro.sys.fw.dex2oat_thread_count=8 \
+    dalvik.vm.boot-dex2oat-threads=8 \
+    dalvik.vm.dex2oat-threads=8
+
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.job_delay=true \
     persist.sys.mcd_config_file=/system/etc/mcd_default.conf \
@@ -428,7 +458,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.sensors.cmc=false \
     ro.vendor.sdk.sensors.gestures=false \
     rild.libpath=/system/vendor/lib64/libril-qc-qmi-1.so \
-    vendor.display.enable_default_color_mode=0 \
+    vendor.display.enable_default_color_mode=1 \
     ro.vendor.audio.sfx.speaker=true \
     ro.vendor.audio.sfx.spk.movie=true \
     persist.vendor.stapp.display=1 \

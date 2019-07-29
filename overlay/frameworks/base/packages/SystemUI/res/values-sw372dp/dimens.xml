@@ -16,7 +16,10 @@
 */
 -->
 <resources>
+	<!-- the rounded corners radius -->
     <dimen name="rounded_corner_radius">14dp</dimen>
+
+    <!-- the padding of rounded corners -->
     <dimen name="rounded_corner_content_padding">8dp</dimen>
     <!-- the padding on the start of the statusbar -->
     <dimen name="status_bar_padding_start">11dp</dimen>
@@ -29,4 +32,7 @@
 
     <!-- Margin on the right side of the system icon group on Keyguard. -->
     <dimen name="system_icons_keyguard_padding_end">11dp</dimen>
+
+    <!-- Width for the spacer, used between QS tiles. -->
+    <dimen name="qs_quick_tile_space_width">0dp</dimen>
 </resources>

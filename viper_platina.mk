@@ -23,21 +23,21 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_n_mr1.mk
 $(call inherit-product, device/xiaomi/platina/device.mk)
 
 # Inherit some common Lineage stuff.
-include vendor/viper/config/common_full_phone.mk
+$(call inherit-product, vendor/viper/config/common.mk)
 
 PRODUCT_NAME := viper_platina
 VIPER_BUILD_TYPE := OFFICIAL
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := platina
 PRODUCT_MANUFACTURER := Xiaomi
-PRODUCT_MODEL := MI 8 Lite
+PRODUCT_MODEL := Mi 8 Lite
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_DEVICE="platina" \
     PRODUCT_NAME="platina" \
-    BUILD_FINGERPRINT="Xiaomi/platina/platina:9/PKQ1.181007.001/10.3.2.0:user/release-keys" \
-    PRIVATE_BUILD_DESC="platina-user 9 PKQ1.181007.001 10.3.2.0 release-keys"
+    PRIVATE_BUILD_DESC="walleye-user 9 PQ3A.190605.003 5524043 release-keys"
+    BUILD_FINGERPRINT="google/walleye/walleye:9/PQ3A.190605.003/5524043:user/release-keys"
 
 TARGET_VENDOR := Xiaomi
