@@ -36,17 +36,6 @@ DEVICE_PACKAGE_OVERLAYS += \
 #PRODUCT_ENFORCE_RRO_TARGETS := \
 #    framework-res
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.sf.lcd_density=403
-
-# ARStickersMod for GoogleCamera and GoogleMaps
-PRODUCT_PACKAGES += \
-    ARStickersMod
-
-# Playground for GoogleCamera
-PRODUCT_PACKAGES += \
-    PlaygroundMod
-
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.audio.low_latency.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.audio.low_latency.xml \
@@ -156,16 +145,11 @@ PRODUCT_PACKAGES += \
     android.frameworks.displayservice@1.0_32 \
     android.hardware.camera.provider@2.4-impl:32 \
     android.hardware.camera.provider@2.4-service \
-    libxml2 \
-    GCamera
+    libxml2
 
 # NotchBarKiller
 PRODUCT_PACKAGES += \
     NotchBarKiller
-
-# Charger
-PRODUCT_PACKAGES += \
-    init.leds.sh
 
 # CNE
 PRODUCT_PACKAGES += \
@@ -240,7 +224,8 @@ PRODUCT_PACKAGES += \
 
 # Health
 PRODUCT_PACKAGES += \
-    android.hardware.health@2.0-service
+    android.hardware.health@2.0-service \
+    chargeonlymode
 
 # HIDL
 PRODUCT_PACKAGES += \
