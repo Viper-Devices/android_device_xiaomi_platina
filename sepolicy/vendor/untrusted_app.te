@@ -18,3 +18,4 @@ allow untrusted_app hal_memtrack_hwservice:hwservice_manager { find };
 allow untrusted_app object_r:file { open };
 allow untrusted_app proc_zoneinfo:file { getattr };
 allow untrusted_app proc_qtaguid_stat:file { getattr };
+allow untrusted_app hal_memtrack_default:binder { call };
