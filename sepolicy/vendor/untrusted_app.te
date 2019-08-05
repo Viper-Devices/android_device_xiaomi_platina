@@ -20,3 +20,5 @@ allow untrusted_app proc_qtaguid_stat:file { getattr };
 allow untrusted_app hal_memtrack_default:binder { call };
 allow untrusted_app vendor_default_prop:file { read };
 allow untrusted_app bluetooth_prop:file { open };
+allow untrusted_app proc:file { read };
+allow untrusted_app anr_data_file:dir { getattr };
