@@ -183,6 +183,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     XiaomiParts
 
+# MIUI Offmode charging
+PRODUCT_PACKAGES += \
+    chargeonlymode
+
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-impl \
