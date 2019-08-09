@@ -33,8 +33,19 @@ include $(LOCAL_PATH)/oem-permissions/permissions.mk
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
 
-#PRODUCT_ENFORCE_RRO_TARGETS := \
-#    framework-res
+PRODUCT_ENFORCE_RRO_TARGETS := \
+    framework-res
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.sf.lcd_density=403
+
+# ARStickersMod for GoogleCamera and GoogleMaps
+PRODUCT_PACKAGES += \
+    ARStickersMod
+
+# Playground for GoogleCamera
+PRODUCT_PACKAGES += \
+    PlaygroundMod
 
 # Permissions
 PRODUCT_COPY_FILES += \
