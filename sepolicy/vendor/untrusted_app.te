@@ -38,3 +38,4 @@ allow untrusted_app sysfs_graphics:file { open };
 allow untrusted_app tmpfs:file { setattr, getattr };
 allow untrusted_app vendor_default_prop:file { open };
 allow untrusted_app unlabeled:dir { search };
+allow untrusted_app rootfs:dir { read };
