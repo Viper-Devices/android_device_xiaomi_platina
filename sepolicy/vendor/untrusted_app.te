@@ -35,3 +35,4 @@ allow untrusted_app proc:file { getattr };
 allow untrusted_app proc_sched:file { getattr, read };
 allow untrusted_app sysfs_leds:file { search };
 allow untrusted_app sysfs_graphics:file { open };
+allow untrusted_app tmpfs:file { setattr };
