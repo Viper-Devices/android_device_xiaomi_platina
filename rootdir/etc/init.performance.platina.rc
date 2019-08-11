@@ -90,7 +90,7 @@ on init
 
     # Setup swap
     write /proc/sys/vm/page-cluster 0
-    write /proc/sys/vm/swappiness 100
+    write /proc/sys/vm/swappiness 10
 
     # Notification LED control default value
     write /sys/class/leds/white/max_brightness 64
