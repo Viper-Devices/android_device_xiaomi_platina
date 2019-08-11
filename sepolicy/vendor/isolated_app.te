@@ -1,5 +1,4 @@
 #============= isolated_app ==================
 allow isolated_app app_data_file:file setattr;
 allow isolated_app app_data_file:dir getattr;
-allow isolated_app untrusted_app_tmpfs:file { write };
 allow isolated_app hal_graphics_allocator_default:fd { use };
