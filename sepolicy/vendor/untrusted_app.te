@@ -29,3 +29,4 @@ allow untrusted_app proc_stat:file { getattr };
 allow untrusted_app sysfs_zram:dir { search };
 allow untrusted_app sysfs_net:dir { open };
 allow untrusted_app sysfs_lowmemorykiller:dir { search };
+allow untrusted_app sysfs_process_reclaim:dir { search };
