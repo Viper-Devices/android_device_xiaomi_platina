@@ -12,7 +12,7 @@ allow untrusted_app sysfs_net:dir { read search };
 allow untrusted_app anr_data_file:dir { getattr read };
 allow untrusted_app proc:file { open read };
 allow untrusted_app proc_tty_drivers:file read;
-allow untrusted_app proc_version:file { open read };
+allow untrusted_app proc_version:file { open read getattr };
 allow untrusted_app self:udp_socket ioctl;
 allow untrusted_app selinuxfs:file { open read };
 allow untrusted_app serialno_prop:file { open read };
