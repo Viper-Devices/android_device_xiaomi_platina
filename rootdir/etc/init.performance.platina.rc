@@ -12,7 +12,7 @@ on early-init
 on init
     # Setup schedtune
     write /dev/stune/foreground/schedtune.prefer_idle 1
-    write /dev/stune/top-app/schedtune.boost 0
+    write /dev/stune/top-app/schedtune.boost 4
     write /dev/stune/top-app/schedtune.prefer_idle 1
 
     # Setup all cpusets
