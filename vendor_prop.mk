@@ -96,6 +96,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.demo.hdmirotationlock=false \
     debug.sf.recomputecrop=0
 
+# UI
+PRODUCT_PROPERTY_OVERRIDES += \
+sys.use_fifo_ui=1
+
 # ro.hdmi.enable=true
 # System props for the cne module
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -236,10 +240,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.wfd.virtual=0
 
-# Property for vendor specific library
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.at_library=libqti-at.so
-
 # Min/max cpu in core control
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.qti.core_ctl_min_cpu=2
@@ -252,11 +252,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Property to enable VDS WFD solution
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.hwc.enable_vds=1
-
-# Settings to enable sensors
-# Device Orientation sensor
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.sensors.dev_ori=false
 
 # Persistent Motion Detector
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -289,6 +284,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Enable HAL3
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.camera.HAL3.enabled=1 \
+    persist.camera.expose.aux=1 \
+    persist.camera.is_type=4 \
+    persist.camera.is_mode=4 \
+    persist.camera.max.previewfps=60 \
     persist.vendor.camera.eis.enable=1
 
 # Expose aux camera for below packages
@@ -371,6 +370,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     keyguard.no_require_sim=true \
     persist.radio.aosp_usr_pref_sel=true \
     persist.radio.apm_sim_not_pwdn=1
+
+#Netflix custom property
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.netflix.bsp_rev=Q845-05000-1
 
 # Vendor prop from miui
 #

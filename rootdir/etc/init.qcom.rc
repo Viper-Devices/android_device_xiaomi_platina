@@ -452,6 +452,10 @@ on post-fs-data
     chown system system /sys/class/devfreq/soc:qcom,gpubw/min_freq
     chown system system /sys/devices/soc/soc:qcom,cpubw/devfreq/soc:qcom,cpubw/min_freq
 
+    #Processgroup
+    chown system system /acct/uid_*
+    chmod 0777 /acct/uid_*
+
 on property:sys.post_boot.parsed=1
     # Setup permission for powerHAL
     chown system system /sys/devices/soc/soc:qcom,cpubw/devfreq/soc:qcom,cpubw/bw_hwmon/hyst_trigger_count
@@ -593,6 +597,7 @@ on property:vold.decrypt=trigger_restart_framework
     start qcom-c_main-sh
     start wcnss-service
     start vendor.cnss_diag
+    restart vendor.audio-hal-2-0
 
 on property:persist.env.fastdorm.enabled=true
     setprop persist.radio.data_no_toggle 1

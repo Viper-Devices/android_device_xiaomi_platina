@@ -36,19 +36,8 @@ include $(LOCAL_PATH)/oem-permissions/permissions.mk
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
 
-#PRODUCT_ENFORCE_RRO_TARGETS := \
-#    framework-res
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.sf.lcd_density=403
-
-# ARStickersMod for GoogleCamera and GoogleMaps
-PRODUCT_PACKAGES += \
-    ARStickersMod
-
-# Playground for GoogleCamera
-PRODUCT_PACKAGES += \
-    PlaygroundMod
+PRODUCT_ENFORCE_RRO_TARGETS := \
+    framework-res
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -161,9 +150,9 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-service \
     libxml2
 
-# Charger
+# NotchBarKiller
 PRODUCT_PACKAGES += \
-    init.leds.sh
+    NotchBarKiller
 
 # CNE
 PRODUCT_PACKAGES += \
@@ -196,6 +185,10 @@ PRODUCT_PACKAGES += \
 # Device-specific settings
 PRODUCT_PACKAGES += \
     XiaomiParts
+
+# MIUI Offmode charging
+PRODUCT_PACKAGES += \
+    chargeonlymode
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -238,7 +231,8 @@ PRODUCT_PACKAGES += \
 
 # Health
 PRODUCT_PACKAGES += \
-    android.hardware.health@2.0-service
+    android.hardware.health@2.0-service \
+    chargeonlymode
 
 # HIDL
 PRODUCT_PACKAGES += \
@@ -249,6 +243,10 @@ PRODUCT_PACKAGES += \
 # IMS
 PRODUCT_PACKAGES += \
     ims-ext-common
+
+# HotwordEnrollement app permissions
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/privapp-permissions-hotword.xml:system/etc/permissions/privapp-permissions-hotword.xml
 
 # Input
 PRODUCT_COPY_FILES += \
@@ -363,6 +361,7 @@ PRODUCT_PACKAGES += \
     init.target.rc \
     init.performance.platina.rc \
     ueventd.qcom.rc \
+    init.mi_thermald.rc \
     fstab.qcom
 
 # RCS
